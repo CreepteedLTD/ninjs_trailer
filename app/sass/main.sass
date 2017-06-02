@@ -1,0 +1,208 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "cart"
+
+@keyframes side-move
+    0%
+       left: -20%
+    100%
+        left: 0%
+@keyframes side-move-back
+    0%
+        left: 0%
+    100%
+        left: -20%
+body
+    background-color: $white
+    overflow-x: hidden
+    overflow-y: scroll
+    font-size: 20px
+    font-family: $futura_light
+    h1
+        font-size: 2em
+    h2
+        font-size: 1.5em
+    h3
+        font-size: 1.25em
+    a
+        text-decoration: none
+
+.top_logo
+    min-height: 25em
+    background-image: url("../img/images/top.png")
+    background-position: 45% 50%
+    background-size: contain
+    background-repeat: no-repeat
+
+
+.search_bar
+    margin: 0 auto
+    position: relative
+    text-align: center
+    .filter_button
+        font-size: 1.315em
+        font-family: $futura_demi
+        position: relative
+        width: auto
+        display: inline-block
+        text-transform: uppercase
+        margin: -0.1em
+        text-align: center
+        padding: 0.3em
+        cursor: pointer
+        color: $dark_grey
+        background-color: $white
+        -webkit-transition: all .5s ease-in
+        -moz-transition: all .5s ease-in
+        -ms-transition: all .5s ease-in
+        -o-transition: all .5s ease-in
+        transition: all .5s ease-in
+        &:hover
+            background-color: $dark_grey
+            color: white
+        &.active
+            background-color: $dark_grey
+            color: white
+        a
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+    .search_button
+        margin-top: 1em
+        input
+            text-decoration: none
+            width: 20em
+            color: $dark_grey
+            font-size: 1em
+            padding: 0.2em
+            padding-left: 1em
+            &:active, &:focus, &:hover
+                text-decoration: none
+                outline: none
+.video_wrap
+    margin: 1em 1em
+    h1
+        font-size: 5em
+        font-family: $futura_demi
+        color: $dark_grey
+        text-align: left
+        line-height: 0.3em
+        margin-bottom: 0.5em
+    .col-md-7
+        padding: 0
+        video
+            background-color: $dark_grey
+            background-repeat: no-repeat
+            background-size: cover
+    .col-md-5
+        .table
+            width: 100%
+            tr
+                font-family: $futura_demi
+                &:first-of-type
+                    height: 1em
+                    border-bottom: 1px solid $dark_grey
+                    margin-bottom: 1em
+            caption
+                font-size: 3.8em
+                color: white
+                font-family: $futura_demi
+                background-color: $dark_grey
+                width: 100%
+                text-align: center
+            thead
+                width: 100%
+            td
+                width: 75%
+                &:nth-child(even)
+                    padding-left: 1em
+                &:nth-child(2), &:nth-child(4)
+                    padding-left: 0
+                    span
+                        padding-left: 1em
+                        padding-right: 1em
+                &:nth-child(odd)
+                    vertical-align: text-top
+                    width: 25%
+            .lighten
+                background-color: $dark_grey
+                color: $white
+
+.dropdown-content
+    display: none
+    position: absolute
+    background-color: $dark_grey
+    color: $white
+    min-width: 23.45em
+    padding-top: 1em
+    padding-bottom: 1em
+    padding-left: 0.7em
+    padding-right: 0.1em
+    z-index: 1
+    left: -13em
+    top: 2.35em
+    transition: all .1s ease-in
+    table
+        width: 100%
+        tbody
+            tr
+                td
+                    vertical-align: text-top
+                    width: 6em
+                    text-align: left
+                    font-size: 0.65em
+                    transition: all .5s
+                    span
+                        transition: all .5s
+                        &:hover
+                            display: inline-block
+                            background-color: $white
+                            color: $dark_grey
+.dropdown
+    position: relative
+    display: inline-block
+    transition: all .1s ease-in
+    &:hover .dropdown-content
+        display: block
+.pagination-wrap
+
+.pagination
+    margin: 0 auto
+    text-align: center
+    padding: 4px
+    padding-top: 2em
+    position: relative
+    li
+        display: inline-block
+        position: relative
+        font-family: $futura_demi
+        text-decoration: none
+        border: 1px solid $dark_grey
+        padding: 1em
+        font-size: 1em
+        background-color: $white
+        transition: all .25s ease-in
+        &:hover
+            text-decoration: none !important
+            color: $white
+            background-color: $dark_grey
+        a
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+        a:hover li
+            color: $white
+        &:hover a
+            color: $white
+            transition: all .25s ease-in
+            text-decoration: none
+    span
+        font-size: 1em
+        font-family: $futura_demi
+        padding-left: 1em
+        padding-right: 1em
